@@ -121,11 +121,11 @@ ul {
    padding:2% 0;
    float:left;
    width:50%;
-   /* display:inline-block; */
+   display:inline-block;
 }
 .about .right{
    width:50%;
-   /* display:inline-block; */
+   display:inline-block;
 }
 .about .right img{
    width:100%
@@ -155,14 +155,12 @@ ul {
 .mission .right{
    padding:2% 0;
    width:50%;
-
    display:inline-block;
 }
 .mission .left{
    float:left;
    width:50%;
-
-   /* display:inline-block; */
+   display:inline-block;
 }
 .mission .left img{
    width:100%;
