@@ -1,0 +1,154 @@
+@charset "UTF-8";
+/* navabr */
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	line-height: 1.6;
+	margin: 0;
+	min-height: 100vh;
+  background-color: #34495e;
+  
+} 
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  h2,
+  h3,
+  a {
+      color: #34495e;
+  }
+  a {
+      text-decoration: none;
+  }
+  .logo {
+      margin: 0;
+      font-size: 0.45em;
+  }
+  .logo img {
+    height: 5vh;
+    width: auto;
+  }
+  .main-nav {
+      margin-top: 5px;
+  }
+  .logo a,
+  .main-nav a {
+      padding: 10px 15px;
+      text-transform: uppercase;
+      text-align: center;
+      display: block;
+  }
+  .main-nav a {
+      color: #34495e;
+      font-size: .99em;
+  }
+  .main-nav a:hover {
+      color: #718daa;
+  }
+  .header {
+      padding-top: .5em;
+      padding-bottom: .5em;
+      border: 1px solid #a2a2a2;
+      background-color: #f4f4f4;
+      -webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+      -moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+      box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+  } 
+  /* ================================= 
+    Media Queries FOR NAVBAR
+  ==================================== */
+  @media (min-width: 769px) {
+      .header,
+      .main-nav {
+          display: flex;
+      }
+      .header {
+          flex-direction: column;
+          align-items: center;
+          .header{
+          width: 80%;
+          margin: 0 auto;
+          max-width: 1150px;
+      }
+      }
+  }
+  @media (min-width: 1025px) {
+      .header {
+          flex-direction: row;
+          justify-content: space-between;
+      }
+  }
+
+/* body */
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  box-sizing: border-box;
+  font-size: 1.6rem;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+.container {
+  margin: 0 auto;
+  max-width: 110rem;
+  min-height: 100vh;
+  padding: 4rem;
+  font-family: sans-serif;
+}
+.heading__secondary {
+  font-size: 3rem;
+  padding-bottom: 5rem;
+  text-align: center;
+}
+.faqs {
+  display: grid;
+  gap: 2rem;
+}
+.faq__question {
+  display: flex;
+  align-items: center;
+  background-color: #fdd9d5;
+  padding: 1rem;
+  cursor: pointer;
+}
+.faq__question::before {
+  display: inline-block;
+  content: "×";
+  margin-right: 5px;
+  color: #1d5f0e;
+  font-weight: 900;
+  transform: rotatez(-135deg);
+  transition: all 0.4s ease-in-out;
+}
+.faq__answer {
+  padding: 1rem;
+  background: #feefed;
+}
+.faq[open] .faq__question::before {
+  transform: rotate(0);
+}
+.faq[open] .faq__answer {
+  animation: slide-down 0.5s ease-in-out;
+}
+@keyframes slide-down { /*SLIDE DOWN*/
+  0% {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>JADON E</title>
+  <link rel="stylesheet" href="events.css">
+  
+
+</head>
+<body>
+  <section> 
+    <header class="header"> <!-- NAVBAR -->
+        <h1 class="logo"><a href="index.html"><img src="IMAGES/LOGO.png"></a></h1>
+      <ul class="main-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </header> 
+</section> 
+
+ <section class="gallery"> <!-- BUTTONS -->
+<h2>Gallery</h2> 
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('wedding')"> Wedding</button>
+  <button class="btn" onclick="filterSelection('birthday')"> Birthday</button>
+  <button class="btn" onclick="filterSelection('office')"> Office</button>
+  <button class="btn" onclick="filterSelection('school')"> School</button>
+</div>
+
+<!-- Gallery Grid -->
+<div class="row">
+  <div class="column wedding"><img src="IMAGES/wedding.jpg"  style="width:100%"></div>
+  <div class="column wedding"><img src="IMAGES/wedding1.jpg"  style="width:100%"></div>
+  <div class="column wedding"><img src="IMAGES/wedding2.jfif"  style="width:100%"></div>
+
+  <div class="column birthday"><img src="IMAGES/birthday1.jpg"  style="width:100%"></div>
+  <div class="column birthday"><img src="IMAGES/birthday2.jpg"  style="width:100%"></div>
+  <div class="column birthday"><img src="IMAGES/birthday3.jpg"  style="width:100%"></div>
+
+  <div class="column office"><img src="IMAGES/office.jpg"  style="width:100%"></div>
+  <div class="column office"><img src="IMAGES/office1.jpeg"  style="width:100%"></div>
+  <div class="column office"><img src="IMAGES/office2.jpg"  style="width:100%"></div>
+
+  <div class="column school"><img src="IMAGES/school events 1.jpg"  style="width:100%"></div>
+  <div class="column school"><img src="IMAGES/school events 2.jpg"  style="width:100%"></div>
+  <div class="column school"><img src="IMAGES/school events.jpg"  style="width:100%"></div>
+  
+
+  </div>
+<!-- END GRID -->
+</div>
+
+</section>
+
+
+<!-- JAVA SCRIPT -->
+  <script  src="events.js"></script>
+  <script src="navbar.js"></script>
+  <script src="https://kit.fontawesome.com/a70d175b59.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

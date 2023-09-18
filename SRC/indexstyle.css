@@ -1,0 +1,441 @@
+/* navabar */
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+h2,
+h3,
+a {
+	color: #34495e;
+}
+a {
+	text-decoration: none;
+}
+.logo {
+	margin: 0;
+	font-size: 0.55em;
+}
+.logo img {
+  height: 7vh;
+  width: auto;
+}
+.main-nav {
+	margin-top: 5px;
+}
+.logo a,
+.main-nav a {
+	padding: 10px 15px;
+	text-transform: uppercase;
+	text-align: center;
+	display: block;
+}
+.main-nav a {
+	color: #34495e;
+	font-size: .99em;
+}
+.main-nav a:hover {
+	color: #718daa;
+}
+.header {
+	padding-top: .5em;
+	padding-bottom: .5em;
+	border: 1px solid #a2a2a2;
+	background-color: #f4f4f4;
+	-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+/* ================================= 
+  Media Queries
+==================================== */
+@media (min-width: 769px) {
+	.header,
+	.main-nav {
+		display: flex;
+	}
+	.header {
+		flex-direction: column;
+		align-items: center;
+    	.header{
+		width: 80%;
+		margin: 0 auto;
+		max-width: 1150px;
+	}}}
+@media (min-width: 1025px) {
+	.header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+
+
+/* INDEX  */
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+.flex-container {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  display: -webkit-flex;
+  /* Safari */
+  display: flex;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+
+.flex-title {
+  color: #f1f1f1;
+  position: relative;
+  font-size: 6vw;
+  margin: auto;
+  text-align: center;
+  transform: rotate(90deg);
+  top: 15%;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+@media screen and (max-width: 768px) {
+  .flex-title {
+    transform: rotate(0deg) !important;
+  }
+}
+
+.flex-about {
+  opacity: 0;
+  color: #f1f1f1;
+  position: relative;
+  width: 70%;
+  font-size: 2vw;
+  padding: 5%;
+  top: 20%;
+  border: 2px solid #f1f1f1;
+  border-radius: 10px;
+  line-height: 1.3;
+  margin: auto;
+  text-align: left;
+  transform: rotate(0deg);
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+@media screen and (max-width: 768px) {
+  .flex-about {
+    padding: 0%;
+    border: 0px solid #f1f1f1;
+  }
+}
+
+.flex-slide {
+  -webkit-flex: 1;
+  /* Safari 6.1+ */
+  -ms-flex: 1;
+  /* IE 10 */
+  flex: 1;
+  cursor: pointer;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+@media screen and (max-width: 768px) {
+  .flex-slide {
+    overflow: auto;
+    overflow-x: hidden;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .flex-slide p {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .flex-slide ul li {
+    font-size: 2em;
+  }
+}
+
+.flex-slide:hover {
+  -webkit-flex-grow: 3;
+  flex-grow: 3;
+}
+
+.home {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(IMAGES/birthday2.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+@media screen and (min-width: 768px) {
+  .home {
+    animation: aboutFlexSlide 3s 1;
+    animation-delay: 0s;
+  }
+}
+
+@keyframes aboutFlexSlide {
+  0% {
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+  }
+  50% {
+    -webkit-flex-grow: 3;
+    flex-grow: 3;
+  }
+  100% {
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .flex-title-home {
+    transform: rotate(90deg);
+    top: 15%;
+    animation: aboutFlexSlide 3s 1;
+    animation-delay: 0s;
+  }
+}
+
+@keyframes homeFlextitle {
+  0% {
+    transform: rotate(90deg);
+    top: 15%;
+  }
+  50% {
+    transform: rotate(0deg);
+    top: 15%;
+  }
+  100% {
+    transform: rotate(90deg);
+    top: 15%;
+  }
+}
+.flex-about-home {
+  opacity: 0;
+}
+@media screen and (min-width: 768px) {
+  .flex-about-home {
+    animation: aboutFlexSlide 3s 1;
+    animation-delay: 0s;
+  }
+}
+
+@keyframes flexAboutHome {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.about {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(IMAGES/office.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.contact-form {
+  width: 100%;
+}
+
+input {
+  width: 100%;
+}
+
+textarea {
+  width: 100%;
+}
+
+.contact {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(IMAGES/graduation.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.work {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(IMAGES/e62686fa-889a-4eb0-a9a8-8de8a64bed7c.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #222;
+  height: 100%;
+  width: 100%;
+  z-index: 11;
+  margin-top: 0;
+  color: #fff;
+  font-size: 1em;
+}
+
+.cube1, .cube2 {
+  background-color: #fff;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: sk-cubemove 1.8s infinite ease-in-out;
+  animation: sk-cubemove 1.8s infinite ease-in-out;
+}
+
+.cube2 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+@-webkit-keyframes sk-cubemove {
+  25% {
+    -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
+  }
+  50% {
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
+  }
+  75% {
+    -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+  }
+}
+@keyframes sk-cubemove {
+  25% {
+    transform: translateX(42px) rotate(-90deg) scale(0.5);
+    -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
+  }
+  50% {
+    transform: translateX(42px) translateY(42px) rotate(-179deg);
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);
+  }
+  50.1% {
+    transform: translateX(42px) translateY(42px) rotate(-180deg);
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
+  }
+  75% {
+    transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+    -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+  }
+}
+
+#home_link:hover {
+  color: white;
+  text-decoration: white;
+
+}
+
+#home_link:visited, #home_link:link 
+{
+  color: white;
+  text-decoration: white;
+
+}
+
+#home_link:active
+{
+  color: white;
+  text-decoration: white;
+
+}
+
+
+/* modal */
+
+
+.btn {
+  padding: 20px 50px;
+  display: inline-block;
+  background: #ffffff;
+  color: white;
+  text-decoration: none;
+  transition: 0.35s ease-in-out;
+  font-weight: 700;
+}
+.btn:hover {
+  background: #dc1029;
+}
+
+.overlay {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.35s ease-in-out;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+.overlay.open {
+  opacity: 1;
+  pointer-events: inherit;
+}
+.overlay .modal {
+  background: white;
+  text-align: center;
+  padding: 40px 80px;
+  box-shadow: 0px 1px 10px rgba(255, 255, 255, 0.35);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.35s ease-in-out;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+.overlay .modal.open {
+  opacity: 1;
+  pointer-events: inherit;
+}
+.overlay .modal.open .content {
+  transform: translate(0, 0px);
+  opacity: 1;
+}
+.overlay .modal .content {
+  transform: translate(0, -10px);
+  opacity: 0;
+  transition: 0.35s ease-in-out;
+}
+.overlay .modal .title {
+  margin-top: 0;
+}
